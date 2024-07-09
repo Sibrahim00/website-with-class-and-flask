@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title" style="color: white"><h1>My Body</h1></div>
+      {% for item in post_object %}
+      <div class="first">
+        <h1 style="font-size: 20px">{{item.title}}</h1>
+        <p>{{item.subtitle}}</p>
+        <a href="{{ url_for('next_page', index=item.id) }}">Real</a>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

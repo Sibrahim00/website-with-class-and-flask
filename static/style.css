@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+body {
+    border: solid #337ab7;
+    border-width: 30px 0 60px 0;
+    background-color: #F8F4E1; /* Green color for the rest of the body */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    display: block;
+    height: 150px;
+    width: 100%;
+    background-color: #36C2CE; /* Red color for the 50px strip */
+    position: absolute;
+    top: 0; /* Positioning it right after the 10px border */
+    left: 0;
+    right: 0;
+    z-index: -1; /* Ensure it is behind other content */
+}
+
+.container {
+    position: relative;
+    top: 20px;
+    left: 35%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.first {
+    border-radius: 10px;
+    flex-basis: 200px;
+    background-color: white;
+    width: 400px;
+}
+
+.first> h1,p,a {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+.box {
+    height: 400px;
+    width: 500px;
+    background-color: white;
+}
